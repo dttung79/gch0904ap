@@ -29,6 +29,7 @@ namespace Products
             System.Console.WriteLine("2. Edit Product"); // TODO
             System.Console.WriteLine("3. Delete Product"); // TODO
             System.Console.WriteLine("4. Show Products");
+            System.Console.WriteLine("5. Find Products"); // TODO: (e.x: ar => Car, Jar)
         }
 
         private int GetChoice()

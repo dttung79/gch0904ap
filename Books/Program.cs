@@ -101,14 +101,44 @@ namespace Books
             System.Console.WriteLine("Edit Book by ID");
             // Home work
             // ask user to enter id
+            System.Console.Write("Enter book id: ");
+            int id = Convert.ToInt32(Console.ReadLine());
             // find book by id
-            // ask user to enter book's info (name, price, pages)
-            // change book's info to what user entered.
+            bool found = false;
+            foreach (Book b in books)
+            {
+                if (b.ID == id)
+                {
+                    // show old book's info
+                    b.ShowBook();
+                    // ask user to enter book's info (name, price, pages)
+                    System.Console.Write("Enter book name: ");
+                    string name = Console.ReadLine();
+                    System.Console.Write("Enter book price: ");
+                    double price = Convert.ToDouble(Console.ReadLine());
+                    System.Console.Write("Enter number of pages: ");
+                    int pages = Convert.ToInt32(Console.ReadLine());
+                    // change book's info to what user entered.
+                    b.Name = name;
+                    b.Price = price;
+                    b.Pages = pages;
+
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) System.Console.WriteLine("No books found!"); 
+            
         }
 
         static void ShowAllBooks()
         {
             // Homework: use for loop to print all book's info
+            foreach (Book b in books)
+            {
+                b.ShowBook();
+                System.Console.WriteLine("-------------------------------");
+            }
         }
     }
 }

@@ -5,19 +5,20 @@ namespace Books
 {
     class Program
     {
-        private static List<Book> books = new List<Book>();
+        private List<Book> books = new List<Book>(); // short-cut to Constructor
         static void Main(string[] args)
         {
+            Program p = new Program();
             while (true)
             {
-                PrintMenu();
+                p.PrintMenu();
                 int choice = Convert.ToInt32(Console.ReadLine());
-                DoTask(choice);
+                p.DoTask(choice);
                 if (choice == 0) break;
             }
         }
 
-        static void PrintMenu()
+        public void PrintMenu()
         {
             System.Console.WriteLine("Book management program");
             System.Console.WriteLine("1. Add book.");
@@ -27,7 +28,7 @@ namespace Books
             System.Console.WriteLine("5. Show all books");
             System.Console.Write("Your choice: ");
         }
-        static void DoTask(int choice)
+        public void DoTask(int choice)
         {
             switch (choice)
             {
@@ -41,7 +42,7 @@ namespace Books
             }
         }
 
-        static void AddBook()
+        private void AddBook()
         {
             System.Console.WriteLine("Add New Book");
             // ask user to enter book's info (name, price, pages)
@@ -57,7 +58,7 @@ namespace Books
             books.Add(b);
             System.Console.WriteLine("Add book successfule. Number of books: " + Book.Count);
         }
-        static void FindBook()
+        private void FindBook()
         {
             System.Console.WriteLine("Find Book by name");
             // ask user to enter book name
@@ -76,7 +77,7 @@ namespace Books
             }
             if (!found) System.Console.WriteLine("No books found!");
         }
-        static void DeleteBook()
+        private void DeleteBook()
         {
             System.Console.WriteLine("Delete Book by ID");
             // ask user to enter id
@@ -96,7 +97,7 @@ namespace Books
             }
             if (!found) System.Console.WriteLine("No books found!");
         }
-        static void EditBook()
+        private void EditBook()
         {
             System.Console.WriteLine("Edit Book by ID");
             // Home work
@@ -131,7 +132,7 @@ namespace Books
             
         }
 
-        static void ShowAllBooks()
+        void ShowAllBooks()
         {
             // Homework: use for loop to print all book's info
             foreach (Book b in books)

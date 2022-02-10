@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Shape
+    public abstract class Shape
     {
         public string Name {get; set;}
         public Shape()
@@ -24,9 +24,9 @@ namespace Shapes
         //     return 0.0;
         // }
         // C2: viet Area duoi dang property
-        public virtual double Area
+        public abstract double Area
         {
-            get { return 0.0; }
+            get;
         } 
 
         public virtual void ShowInfo()

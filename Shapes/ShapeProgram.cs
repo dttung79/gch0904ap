@@ -50,7 +50,12 @@ namespace Shapes
         }
         private void AddTriangle()
         {
-            // TODO
+            EnterTriangleProgram subProgram = new EnterTriangleProgram();
+            subProgram.Run();
+            foreach(Triangle t in subProgram.ListTriangles)
+            {
+                listShapes.Add(t);
+            }
         }
         private void AddSquare()
         {

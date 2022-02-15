@@ -18,12 +18,12 @@ namespace Shapes
             get { return listTriangles; }
         }
 
-        public override void PrintMenu()
+        protected override void PrintMenu()
         {
             // TODO: in menu cho lua chon nhap 3 loai tam giac (thuong, can, deu)
         }
 
-        public override void DoTask(int choice)
+        protected override void DoTask(int choice)
         {
             // TODO: ung voi moi lua chon, y/c nguoi dung nhap loai tam giac tuong ung
             // add listTriangles

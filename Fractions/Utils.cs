@@ -28,6 +28,7 @@ namespace Fractions
 
         public static Fraction GetFraction(string message)
         {
+            System.Console.WriteLine(message);
             Fraction f = new Fraction();
             bool invalidFraction = true;
             while (invalidFraction)

@@ -42,5 +42,19 @@ namespace Fractions
         {
             return numerator + "/" + denominator;
         }
+
+        public Fraction Add(Fraction f)
+        {
+            int a = Numerator;
+            int b = Denominator;
+            int c = f.Numerator;
+            int d = f.Denominator;
+
+            int n = a*d + b*c;
+            int d = b*d;
+
+            return new Fraction(n, d);
+        }
+        // TODO: Subtract, Multiply, Divide
     }
 }

@@ -18,7 +18,7 @@ namespace Fractions
                     System.Console.Write(message);
                     n = Convert.ToInt32(Console.ReadLine());
                     invalidInput = false;
-                } catch (FormatException ex) 
+                } catch (FormatException) 
                 {
                     System.Console.WriteLine("Error: not number. Please try again.!");
                 }

@@ -15,7 +15,9 @@ namespace Fractions
             System.Console.WriteLine("f2 = " + f2);
 
             // TODO: Thuc hien cac phep tinh +-*/ in ra ket qua
-            // Fraction f3 = f1.Add(f2);
+            Fraction f3 = f1.Add(f2);
+            f3.Simplify();
+            System.Console.WriteLine(f1 + " + " + f2 + " = " + f3);
         }
     }
 }

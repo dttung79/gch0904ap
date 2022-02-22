@@ -50,11 +50,17 @@ namespace Fractions
             int c = f.Numerator;
             int d = f.Denominator;
 
-            int n = a*d + b*c;
-            int d = b*d;
+            int num = a*d + b*c;
+            int den = b*d;
 
-            return new Fraction(n, d);
+            return new Fraction(num, den);
         }
         // TODO: Subtract, Multiply, Divide
+        public void Simplify()
+        {
+            // Tim UCLN cua numerator va denominator
+            // numerator /= UCLN
+            // denominator /= UCLN
+        }
     }
 }

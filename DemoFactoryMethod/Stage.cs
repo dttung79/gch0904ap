@@ -32,6 +32,7 @@ namespace DemoFactoryMethod
                 Tower t = CreateTower();
                 towers.Add(t);
             }
+            Shot();
         }
         public void Shot()
         {
